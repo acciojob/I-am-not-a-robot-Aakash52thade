@@ -1,72 +1,43 @@
-/* ---- (Optional) If you still want .img1..img5 classes, keep them, but JS sets src explicitly. ---- */
-/* .img1 { content: url("https://picsum.photos/id/237/200/300"); }
-.img2 { content: url("https://picsum.photos/seed/picsum/200/300"); }
-.img3 { content: url("https://picsum.photos/200/300?grayscale"); }
-.img4 { content: url("https://picsum.photos/200/300/"); }
-.img5 { content: url("https://picsum.photos/200/300.jpg"); } */
+.img1 {
+  content: url("https://picsum.photos/id/237/200/300");
+}
 
-/* ---- Layout ---- */
+.img2 {
+  content: url("https://picsum.photos/seed/picsum/200/300");
+}
+
+.img3 {
+  content: url("https://picsum.photos/200/300?grayscale");
+}
+
+.img4 {
+  content: url("https://picsum.photos/200/300/");
+}
+
+.img5 {
+  content: url("https://picsum.photos/200/300.jpg");
+}
+
+img {
+  margin: 10px;
+  border: 5px solid #555;
+  width: 10%;
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-#tiles {
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 16px auto;
-  max-width: 840px;
-}
-
-/* ---- Images ---- */
-img.tile {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin: 0;
-  border: 5px solid #555;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 120ms ease, border-color 120ms ease;
-}
-
-img.tile:hover {
-  transform: translateY(-2px);
 }
 
 .selected {
-  border-color: rgb(0, 195, 255);
+  border: 5px solid rgb(0, 195, 255);
 }
 
-/* ---- Text ---- */
-h3, p {
+p {
   text-align: center;
-  margin: 8px auto;
-  max-width: 840px;
-}
-
-/* ---- Buttons ---- */
-#controls {
-  gap: 12px;
-  margin: 12px 0 8px;
 }
 
 button {
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background: #f6f6f6;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Initially hidden as per State 1 */
-#reset, #verify {
-  display: none;
+  margin: 20px;
 }
